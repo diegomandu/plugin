@@ -5,6 +5,8 @@ function r_filter_recipe_content( $content ){
 		return $content;
 	}
 
-	return $content;
+	$recipe_html			=	file_get_contents( 'recipe-template.php', true );
+
+	return $recipe_html . $content;
 	
 }
