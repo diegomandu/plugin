@@ -17,6 +17,7 @@ if( !function_exists( 'add_action' ) ){
 
 
 // Includes 
+include( 'includes/activate.php' );
 
 
 // Hooks
