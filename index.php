@@ -20,6 +20,7 @@ if( !function_exists( 'add_action' ) ){
 
 
 // Hooks
+register_activation_hook( __FILE__, 'r_activate_plugin' );
 
 
 // Shortcodes
