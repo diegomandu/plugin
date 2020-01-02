@@ -1,6 +1,5 @@
 <?php 
 
-
 function recipe_init() {
 	$labels = array(
 		'name'               => _x( 'Recipes', 'post type general name', 'recipe' ),
