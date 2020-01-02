@@ -22,6 +22,7 @@ include( 'includes/activate.php' );
 
 // Hooks
 register_activation_hook( __FILE__, 'r_activate_plugin' );
+add_action( 'init', 'recipe_init' );
 
 
 // Shortcodes
