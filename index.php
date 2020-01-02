@@ -7,3 +7,8 @@
 *	Author URI: http://mandudev.com/
 * 	text domain: recipe
 */
+
+if( !function_exists( 'add_action' ) ){
+		echo "Hi there! I'm just a plugin, not much I can do when called directly.";
+		exit;
+}
