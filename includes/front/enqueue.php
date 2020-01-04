@@ -12,7 +12,7 @@ function r_enqueue_scripts(){
 		true
 	);
 	wp_register_script(
-		'r_main', plugin_url( '/assets/js/main.js', RECIPE_PLUGIN_URL ), ['jquery'], '1.0.0', true
+		'r_main', plugins_url( '/assets/js/main.js', RECIPE_PLUGIN_URL ), ['jquery'], '1.0.0', true
 	);
 
 	wp_enqueue_script( 'r_rateit' );
