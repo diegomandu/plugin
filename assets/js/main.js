@@ -8,5 +8,9 @@
 			rating: 		$(this).rateit( 'value' )
 		};
 
+		$.post( recipe_obj.ajax_url, form, function(data){
+			
+		});
+
 	});
 })(jQuery);
