@@ -8,6 +8,16 @@ function r_rate_recipe(){
 	$rating			=	round( $_POST['rating'], 1 );
 	$user_IP		=	$_SERVER['REMOTE_ADDR'];
 
+	$rating_count	=	$wpdb->get_var(
+		"SELECT COUNT(*) FROM `" . $wpdb->prefix . "recipe_ratings` WHERE recipe_id='" . $post_ID ."' AND  user_ip='"  . 	$user_IP . "'"
+	);
+
+	if( $rating_count > 0 ){
+		wp_send_json( $output );
+	}
+
+
+
 	$wpdb->insert(
 		$wpdb->prefix . 'recipe_ratings',
 		[
