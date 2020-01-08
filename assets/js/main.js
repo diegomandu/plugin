@@ -1,6 +1,6 @@
 (function($){
 	$("#recipe_rating").bind( 'rated', function(){
-		$(this).rateit( 'readonly', true );
+		$(this).rateit( 'readonly', false );
 
 		var form		=	{
 			action:			'r_rate_recipe',
