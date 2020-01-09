@@ -50,6 +50,8 @@ function r_rate_recipe(){
 		$output['status']	=	2;
 		wp_send_json( $recipe_data );
 		die();
+
+		
 	}
 
 
@@ -76,6 +78,8 @@ function r_rate_recipe(){
 
 	$output['status']	=	2;
 	wp_send_json( $output );
+
+
 }
 
 ?>
