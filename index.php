@@ -23,7 +23,7 @@ include( 'process/save-post.php' );
 include( 'process/filter-content.php' );
 include( 'includes/front/enqueue.php' );
 include( 'process/rate-recipe.php' );
-
+include( 'includes/admin/init.php' );
 
 
 // Hooks
