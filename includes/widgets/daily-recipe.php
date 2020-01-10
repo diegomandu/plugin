@@ -49,6 +49,7 @@ public function update( $new_instance, $old_instance ){
 
 
 
+
 /**
 *
 * Outputs the content of the widget
@@ -58,6 +59,7 @@ public function update( $new_instance, $old_instance ){
 */
 public function widget( $args, $instance ){
 	// outputs the content of the widget
+
 
 }
 
