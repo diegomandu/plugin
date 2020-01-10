@@ -24,7 +24,7 @@ include( 'process/filter-content.php' );
 include( 'includes/front/enqueue.php' );
 include( 'process/rate-recipe.php' );
 include( 'includes/admin/init.php' );
-
+include( 'includes/widgets.php' );
 
 // Hooks
 register_activation_hook( __FILE__, 'r_activate_plugin' );
