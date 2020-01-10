@@ -28,6 +28,7 @@ include( dirname(RECIPE_PLUGIN_URL) . '/includes/widgets.php' );
 include( 'includes/widgets/daily-recipe.php' );
 include( 'includes/cron.php' );
 include( 'includes/deactivate.php' );
+include( 'includes/utility.php' );
 
 // Hooks
 register_activation_hook( __FILE__, 'r_activate_plugin' );
