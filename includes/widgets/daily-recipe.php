@@ -31,7 +31,21 @@ public function form( $instance ){
 
 }
 
-
+/*
+*Processing widget options on save
+*
+*
+*@param array $new_instance The new options
+*@param array $old_instance The previous options
+*
+*@return array
+*/
+public function update( $new_instance, $old_instance ){
+	// processes widget options to be saved
+	$instance 				= [];
+	$instance['title']		= strip_tags($new_instance['title']);
+	return $instance;
+}
 
 
 
