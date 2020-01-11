@@ -30,6 +30,7 @@ include( 'includes/cron.php' );
 include( 'includes/deactivate.php' );
 include( 'includes/utility.php' );
 include( 'includes/shortcodes/creator.php' );
+include( 'process/submit-user-recipe.php' );
 
 // Hooks
 register_activation_hook( __FILE__, 'r_activate_plugin' );
