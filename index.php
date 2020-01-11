@@ -43,6 +43,8 @@ add_action( 'wp_ajax_nopriv_r_rate_recipe', 'r_rate_recipe' );
 add_action( 'admin_init', 'recipe_admin_init' );
 add_action( 'widgets_init', 'r_widgets_init' );
 add_action( 'r_daily_recipe_hook', 'r_daily_generate_recipe' );
+add_action( 'wp_ajax_r_submit_user_recipe', 'r_submit_user_recipe' );
+add_action( 'wp_ajax_nopriv_r_submit_user_recipe', 'r_submit_user_recipe' );
 
 // Shortcodes
 add_shortcode( 'recipe_creator', 'r_recipe_creator_shortcode' );
