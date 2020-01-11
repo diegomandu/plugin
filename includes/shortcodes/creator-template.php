@@ -3,10 +3,7 @@
         <label>Title</label>
         <input type="text" class="form-control" id="r_inputTitle">
     </div>
-    <div class="form-group">
-        <label>Content</label>
-        <textarea class="form-control" id="recipecontenteditor"></textarea>
-    </div>
+    CONTENT_EDITOR
     <div class="form-group">
         <button type="submit" class="btn btn-primary">Submit Recipe</button>
     </div>
