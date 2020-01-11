@@ -2,9 +2,9 @@
 
 function r_recipe_creator_shortcode(){
 	$creatorHTML		=	file_get_contents('creator-template.php', true);
-
+	$editorHTML			=	r_generate_content_editor();
+	$creatorHTML		=	str_replace( 'CONTENT_EDITOR', $editorHTML, $creatorHTML );
 	
-
 	return $creatorHTML;
 }
 
