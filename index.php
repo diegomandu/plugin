@@ -44,3 +44,4 @@ add_action( 'widgets_init', 'r_widgets_init' );
 add_action( 'r_daily_recipe_hook', 'r_daily_generate_recipe' );
 
 // Shortcodes
+add_shortcode( 'recipe_creator', 'r_recipe_creator_shortcode' );
