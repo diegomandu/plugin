@@ -15,4 +15,12 @@ function r_submit_user_recipe(){
 	$recipe_data['rating']			=	0;
 	$recipe_data['rating_count']	=	0;
 
+	$post_id						=	wp_insert_post([
+		'post_content'				=>	$content,
+		'post_name'					=>	$title,
+		'post_title'				=>	$title,
+		'post_status'				=>	'pending',
+		'post_type'					=>	'recipe'
+	]);
+
 }
