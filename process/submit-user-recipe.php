@@ -23,4 +23,9 @@ function r_submit_user_recipe(){
 		'post_type'					=>	'recipe'
 	]);
 
+	update_post_meta( $post_id, 'recipe_data', $recipe_data );
+
+	$output['status']				=	2;
+	wp_send_json($output);
+
 }
