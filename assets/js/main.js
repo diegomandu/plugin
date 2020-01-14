@@ -14,7 +14,7 @@
 
 	});
 
-	$("#recipe_form").on( 'submit', function(e){
+	$("#recipe-form").on( 'submit', function(e){
 		e.preventDefault();
 
 		$(this).hide();
@@ -31,7 +31,7 @@
 		$.post( recipe_obj.ajax_url, form, function(data){
 			if( data.status == 2 ){
 				$('#recipe-status').html(
-					'<div class="alert alert-sucess">Recipe submitted successfully!</div>'
+					'<div class="alert alert-success">Recipe submitted successfully!</div>'
 				);
 			}else{
 				$('#recipe-status').html(
