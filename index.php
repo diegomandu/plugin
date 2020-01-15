@@ -31,7 +31,7 @@ include( 'includes/deactivate.php' );
 include( 'includes/utility.php' );
 include( 'includes/shortcodes/creator.php' );
 include( 'process/submit-user-recipe.php' );
-include( 'includes/shortcode/auth-form.php' );
+include( 'includes/shortcodes/auth-form.php' );
 
 // Hooks
 register_activation_hook( __FILE__, 'r_activate_plugin' );
