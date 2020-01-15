@@ -32,4 +32,6 @@ function recipe_create_account(){
 	if( is_wp_error($user_id) ){
 		wp_send_json($output);
 	}
+
+	wp_new_user_notification( $user_id, null, 'user' );
 }
