@@ -33,6 +33,7 @@ include( 'includes/shortcodes/creator.php' );
 include( 'process/submit-user-recipe.php' );
 include( 'includes/shortcodes/auth-form.php' );
 include( 'process/create-account.php' );
+include( 'process/login.php' );
 
 // Hooks
 register_activation_hook( __FILE__, 'r_activate_plugin' );
