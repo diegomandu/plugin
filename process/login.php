@@ -2,7 +2,7 @@
 
 function recipe_user_login(){
 	$output				=	[ 'status' => 1 ];
-	$nonce				=	isset($_POST['_wponce']) ? $_POST['_wponce'] : '';
+	$nonce				=	isset($_POST['_wpnonce']) ? $_POST['_wpnonce'] : '';
 
 	if( !wp_verify_nonce( $nonce, 'recipe_auth' ) ){
 		wp_send_json($output);

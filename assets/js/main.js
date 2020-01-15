@@ -76,7 +76,7 @@
 
 	});
 
-	$(document).on( 'submit', '#login-form',function(e){
+	$(document).on( 'submit', '#login-form', function(e){
 		e.preventDefault();
 
 		$("#login-status").html('<div class="alert alert-info">Please wait while we log you in.</div>');
@@ -89,7 +89,7 @@
 			pass: 						$("#login-form-password").val()
 		};
 
-		$.post( recipe_obj.ajax_url, form ).always(function(data)){
+		$.post( recipe_obj.ajax_url, form ).always(function(data){
 			if( data.status == 2 ){
 				$("#login-status").html('<div class="alert alert-success">Success!</div>');
 				location.href				=	recipe_obj.home_url;
@@ -99,8 +99,8 @@
 				);
 				$("#login-form").show();
 			}
-		}
+		});
 
-	})
+	});
 
 })(jQuery);
