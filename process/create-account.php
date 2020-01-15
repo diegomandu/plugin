@@ -18,7 +18,7 @@ function recipe_create_account(){
 	$pass 				=	sanitize_text_field( $_POST['pass'] );
 	$confirm_pass		=	sanitize_text_field( $_POST['confirm_pass'] );
 
-	if( username_exists($username) || email_exists($email); || $pass != $confirm_pass || !is_email($email) ){
+	if( username_exists($username) || email_exists($email) || $pass != $confirm_pass || !is_email($email) ){
 		wp_send_json($output);
 	}
 
