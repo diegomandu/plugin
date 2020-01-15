@@ -9,6 +9,12 @@ function r_recipe_auth_form_shortcode(){
 		 $formHTML	
 	);
 
+	$formHTML			= str_replace(
+		'SHOW_REG_FORM',
+		( !get_option('users_can_register') ? 'style="display:none;"' : '' ),
+		$formHTML
+	);
+
 	return $formHTML;
 
 }
