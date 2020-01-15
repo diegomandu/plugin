@@ -50,3 +50,4 @@ add_action( 'wp_ajax_nopriv_r_submit_user_recipe', 'r_submit_user_recipe' );
 
 // Shortcodes
 add_shortcode( 'recipe_creator', 'r_recipe_creator_shortcode' );
+add_shortcode( 'recipe_auth_form', 'r_recipe_auth_form_shortcode' );
