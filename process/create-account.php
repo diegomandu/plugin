@@ -21,4 +21,15 @@ function recipe_create_account(){
 	if( username_exists($username) || email_exists($email); || $pass != $confirm_pass || !is_email($email) ){
 		wp_send_json($output);
 	}
+
+	$user_id			=	wp_insert_user([
+		'user_login'	=>	$username,
+		'user_pass'		=>	$pass,
+		'user_email'	=>	$email,
+		'user_nicename'	=>	$name
+	]);
+
+	if( is_wp_error($user_id) ){
+		wp_send_json($output);
+	}
 }
