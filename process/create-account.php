@@ -34,4 +34,12 @@ function recipe_create_account(){
 	}
 
 	wp_new_user_notification( $user_id, null, 'user' );
+
+	$user 				=	get_user_by( 'id', $user_id );
+	wp_set_current_user( $user_id, $user->user_login );
+	wp_set_auth_cookie( $user_id );
+	do_action( 'wp_login', $user->user_login, $user );
+
+	$output['status']	= 2;
+	wp_send_json($output);
 }
