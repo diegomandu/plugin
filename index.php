@@ -34,6 +34,7 @@ include( 'process/submit-user-recipe.php' );
 include( 'includes/shortcodes/auth-form.php' );
 include( 'process/create-account.php' );
 include( 'process/login.php' );
+include( 'includes/shortcodes/auth-alt-form.php' );
 
 // Hooks
 register_activation_hook( __FILE__, 'r_activate_plugin' );
