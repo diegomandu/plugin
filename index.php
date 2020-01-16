@@ -54,9 +54,9 @@ add_action( 'wp_ajax_nopriv_recipe_create_account', 'recipe_create_account' );
 add_action( 'wp_ajax_nopriv_recipe_user_login', 'recipe_user_login' );
 //add_filter( 'authenticate', 'wp_authenticate_username_password', 20, 3 );
 //add_filter( 'authenticate', 'wp_authenticate_spam_check', 99 );*/
-add_filter( 'authenticate', 'r_alt_authenticate', 100, 3);
+//add_filter( 'authenticate', 'r_alt_authenticate', 100, 3);
 
 // Shortcodes
 add_shortcode( 'recipe_creator', 'r_recipe_creator_shortcode' );
 add_shortcode( 'recipe_auth_form', 'r_recipe_auth_form_shortcode' );
-add_shortcode( 'recipe_auth_alt_form', 'r_recipe_auth_alt_form_shortcode' );
+//add_shortcode( 'recipe_auth_alt_form', 'r_recipe_auth_alt_form_shortcode' );
