@@ -57,7 +57,7 @@ add_action( 'wp_ajax_nopriv_recipe_user_login', 'recipe_user_login' );
 //add_filter( 'authenticate', 'wp_authenticate_spam_check', 99 );*/
 //add_filter( 'authenticate', 'r_alt_authenticate', 100, 3);
 add_filter( 'wp_nav_menu_test-secondary_items', 'ju_new_nav_menu_items', 999 );
-
+add_action( 'wp_dashboard_setup', 'r_dashboard_widgets' );
 
 
 
