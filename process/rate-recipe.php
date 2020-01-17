@@ -8,13 +8,13 @@ function r_rate_recipe(){
 	$rating			=	round( $_POST['rating'], 1 );
 	$user_IP		=	$_SERVER['REMOTE_ADDR'];
 
-	$rating_count	=	$wpdb->get_var(
-		"SELECT COUNT(*) FROM `" . $wpdb->prefix . "recipe_ratings` WHERE recipe_id='" . $post_ID . "' AND user_ip='" . $user_IP . "'"
-	);
+	$rating_count	=	$wpdb->get_var($wpdb->prepare(
+		"SELECT COUNT(*) FROM `" . $wpdb->prefix . "recipe_ratings` WHERE recipe_id=%d AND user_ip=%s", $post_ID, $user_IP
+	));
 
-	$previous_rating	=	$wpdb->get_var(
-		"SELECT rating FROM `" . $wpdb->prefix . "recipe_ratings` WHERE recipe_id='" . $post_ID . "' AND user_ip='" . $user_IP . "'"
-	);
+	$previous_rating	=	$wpdb->get_var($wpdb->prepare(
+		"SELECT rating FROM `" . $wpdb->prefix . "recipe_ratings` WHERE recipe_id=%d AND user_ip=%s", $post_ID, $user_IP
+	));
 
 	$previous_recipe_data		=	get_post_meta( $post_ID, 'recipe_data', true );
 	
@@ -40,8 +40,8 @@ function r_rate_recipe(){
 
 		// Update Recipe Metadata
 		$recipe_data		=	get_post_meta( $post_ID, 'recipe_data', true );
-		$recipe_data['rating'] = round($wpdb->get_var(
-		"SELECT AVG(`rating`) FROM `" . $wpdb->prefix . "recipe_ratings` WHERE recipe_id='" . $post_ID . "'"), 1);
+		$recipe_data['rating'] = round($wpdb->get_var($wpdb->prepare(
+		"SELECT AVG(`rating`) FROM `" . $wpdb->prefix . "recipe_ratings` WHERE recipe_id=%d", $post_ID)), 1);
 
 
 		update_post_meta( $post_ID, 'recipe_data', $recipe_data );
@@ -70,8 +70,8 @@ function r_rate_recipe(){
 	// Update Recipe Metadata
 	$recipe_data		=	get_post_meta( $post_ID, 'recipe_data', true );
 	$recipe_data['rating_count']++;
-	$recipe_data['rating'] = round($wpdb->get_var(
-		"SELECT AVG(`rating`) FROM `" . $wpdb->prefix . "recipe_ratings` WHERE recipe_id='" . $post_ID . "'"), 1);
+	$recipe_data['rating'] = round($wpdb->get_var($wpdb->prepare(
+		"SELECT AVG(`rating`) FROM `" . $wpdb->prefix . "recipe_ratings` WHERE recipe_id=%d", $post_ID)), 1);
 
 
 	update_post_meta( $post_ID, 'recipe_data', $recipe_data );
