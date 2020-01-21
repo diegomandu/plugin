@@ -5,6 +5,6 @@ function r_admin_enqueue(){
 		return;
 	}
 
-	wp_register_style( 'r_bootstrap', plugin_url( '/assets/css/bootstrap.css', RECIPE_PLUGIN_URL ));
+	wp_register_style( 'r_bootstrap', plugins_url( '/assets/css/bootstrap.css', RECIPE_PLUGIN_URL ));
 	wp_enqueue_style( 'r_bootstrap' );
 }
