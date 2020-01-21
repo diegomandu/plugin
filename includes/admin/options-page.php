@@ -1,5 +1,9 @@
 <?php 
 
-function r_admin_menu(){
-	
+function r_plugin_opts_page(){
+	?>
+	<div class="wrap">
+		Hello
+	</div>
+	<?php
 }
