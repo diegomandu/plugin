@@ -38,6 +38,7 @@ include( 'includes/shortcodes/auth-alt-form.php' );
 include( 'includes/front/logout-link.php' );
 include( 'includes/admin/dashboard-widgets.php' );
 include( 'includes/shortcodes/twitter-follow.php' );
+include( 'includes/admin/menus.php' );
 
 // Hooks
 register_activation_hook( __FILE__, 'r_activate_plugin' );
