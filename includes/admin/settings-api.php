@@ -7,7 +7,7 @@ function r_settings_api(){
 		'recipe_settings',
 		'Recipe Settings',
 		'r_settings_section',
-		'r_opts_section'
+		'r_opts_sections'
 	);
 
 	add_settings_field(
@@ -22,7 +22,7 @@ function r_settings_api(){
 		'recipe_submission_login_required',
 		'User login required for submitting recipes',
 		'recipe_submission_login_required_input_cb',
-		'r_opts_sections'
+		'r_opts_sections',
 		'recipe_settings'
 	);
 }
@@ -36,7 +36,7 @@ function rating_login_required_input_cb(){
 	?>
 	<select id='rating_login_required' name='r_opts[rating_login_required]'>
 		<option value="1">No</option>
-		<option value="2">Yes
+		<option value="2"
 			<?php echo $recipe_opts['rating_login_required'] == 2 ? 'SELECTED' : '' ?>>Yes</option>
 	</select>
 	<?php
@@ -47,7 +47,7 @@ function recipe_submission_login_required_input_cb(){
 	?>
 	<select id='recipe_submission_login_required' name='r_opts[recipe_submission_login_required]'>
 		<option value="1">No</option>
-		<option value="2">Yes</option>
+		<option value="2"
 			<?php echo $recipe_opts['recipe_submission_login_required'] == 2 ? 'SELECTED' : ''; ?>>Yes</option>
 	</select>
 	<?php
