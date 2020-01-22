@@ -4,9 +4,9 @@ function r_rate_recipe(){
 	global $post, $wpdb;
 
 	$output			=	[ 'status' => 1 ];
-	$recipe_options =	get_option( 'r_opts' );
+	$recipe_option =	get_option( 'r_opts' );
 
-	if( !is_user_logged_in() && $recipe_options['rating_login_required'] == 2 ){
+	if( !is_user_logged_in() && $recipe_option['rating_login_required'] == 2 ){
 		wp_send_json($output);
 	}
 
