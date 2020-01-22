@@ -18,7 +18,7 @@
 		title: 									'Select or Upload Media',
 		button: {
 			text: 								'Use this media' 
-		}
+		},
 		multiple: 								false
 	});
 
@@ -26,9 +26,10 @@
 		var attachment						=	featured_frame.state().get('selection').first().toJSON();
 		$("#recipe-img-preview").attr( 'src', attachment.url );
 		$("#r_inputImgID").val( attachment.id );
+		
 	});
 
-	$(document).on('click', '#recipe-img-upload-btn', function(e){
+	$(document).on( 'click', '#recipe-img-upload-btn', function(e){
 		e.preventDefault();
 		featured_frame.open();
 	});
@@ -41,12 +42,15 @@
 			'<div class="alert alert-info">Please wait! We are submitting your recipe.</div>'
 		);
 
+
+
 		var form			=	{
 			action: 			'r_submit_user_recipe',
 			title: 				$("#r_inputTitle").val(),
 			content: 			tinymce.activeEditor.getContent(),
 			attachment_id: 		$("#r_inputImgID").val()
 		}
+
 
 		$.post( recipe_obj.ajax_url, form, function(data){
 			if( data.status == 2 ){
